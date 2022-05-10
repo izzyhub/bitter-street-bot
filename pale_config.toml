@@ -1,0 +1,12 @@
+# Authentication variables
+[authentication]
+base = "https://coolfriend.club"
+client_id = "B8YmVMbvM9mt9zM0uv4GmOUJm_iJQE5bUv_GzidxA-w"
+client_secret = "I2eusnTtLOS7FCi_oSfio9D7mUfZycqj1pnvBQomLqI"
+redirect = "urn:ietf:wg:oauth:2.0:oob"
+token = "cKU4MqbxxBB0TUY6tl7xLk2X0H4080CtWzQLGW6xZQg"
+
+[[feeds]]
+url = "https://palewebserial.wordpress.com/feed/"
+cache_file = "./pale_cache_file.xml"
+post_n_items_when_new = 1
