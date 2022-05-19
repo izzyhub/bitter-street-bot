@@ -7,6 +7,10 @@ redirect = "urn:ietf:wg:oauth:2.0:oob"
 token = "cKU4MqbxxBB0TUY6tl7xLk2X0H4080CtWzQLGW6xZQg"
 
 [[feeds]]
+name = "Pale"
 url = "https://palewebserial.wordpress.com/feed/"
 cache_file = "./pale_cache_file.xml"
 post_n_items_when_new = 1
+fields_in_status = ["Title", "Link"]
+language = "en"
+visibility = "public"

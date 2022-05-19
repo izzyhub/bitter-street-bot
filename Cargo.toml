@@ -6,7 +6,8 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-rss = "2.0"
+rss = { version = "2.0", features = ["atom_syndication", "validation"] }
+atom_syndication = "0.11"
 elefren = { version = "0.22", features=["toml"] }
 
 reqwest = { version = "0.11", features = ["json"] }
@@ -15,7 +16,9 @@ tokio = { version = "1", features = ["full"] }
 toml = "0.5"
 serde = "1.0.137"
 
-clap = { version = "3.0", features = ["derive"] }
+clap = { version = "3.0", features = ["derive", "cargo"] }
+thiserror = "1.0"
+anyhow = "1.0"
 
 [lib]
 path = "src/lib.rs"

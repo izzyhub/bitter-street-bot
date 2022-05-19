@@ -1,15 +1,30 @@
-use feed_the_fed::run;
+use std::path::Path;
 
-use clap::Arg;
-
+use clap::{Arg, command};
 
 #[tokio::main]
-async fn main() -> std::io::Result<()> {
+async fn main() {
+
     let matches = command!().arg(
         Arg::new("configuration-file")
         .required(true)
+        .help("path to the configration file with feed and authentication information")
     ).get_matches();
 
-    let configuration_path = matches.value_of_os("configuration-file").map(std::path::PathBuf::from);
-    feed_the_fed::run(configuration)
+    let configuration_path = matches.value_of("configuration-file");
+    let configuration_path = match configuration_path {
+        Some(path) => path,
+        None => {
+            eprintln!("Pass the path of the configuration file");
+            return;
+        },
+    };
+
+    match feed_the_fed::run(Path::new(configuration_path)).await {
+        Ok(_) => {},
+        Err(e) => {
+            eprintln!("Error: {e}");
+            return;
+        }
+    }
 }
