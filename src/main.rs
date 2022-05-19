@@ -20,7 +20,7 @@ async fn main() {
         },
     };
 
-    match feed_the_fed::run(Path::new(configuration_path)).await {
+    match bitter_street_bot::run(Path::new(configuration_path)).await {
         Ok(_) => {},
         Err(e) => {
             eprintln!("Error: {e}");

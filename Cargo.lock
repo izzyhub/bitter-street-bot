@@ -115,6 +115,22 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bef38d45163c2f1dde094a7dfd33ccf595c92905c8f8f4fdc18d06fb1037718a"
 
 [[package]]
+name = "bitter_street_bot"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "atom_syndication",
+ "clap",
+ "elefren",
+ "reqwest 0.11.10",
+ "rss",
+ "serde",
+ "thiserror",
+ "tokio 1.18.1",
+ "toml",
+]
+
+[[package]]
 name = "block-buffer"
 version = "0.7.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -581,22 +597,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c3fcf0cee53519c866c09b5de1f6c56ff9d647101f81c1964fa632e148896cdf"
 dependencies = [
  "instant",
-]
-
-[[package]]
-name = "feed_the_fed"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "atom_syndication",
- "clap",
- "elefren",
- "reqwest 0.11.10",
- "rss",
- "serde",
- "thiserror",
- "tokio 1.18.1",
- "toml",
 ]
 
 [[package]]

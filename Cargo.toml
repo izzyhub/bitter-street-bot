@@ -1,5 +1,5 @@
 [package]
-name = "feed_the_fed"
+name = "bitter_street_bot"
 version = "0.1.0"
 edition = "2021"
 
@@ -25,4 +25,4 @@ path = "src/lib.rs"
 
 [[bin]]
 path = "src/main.rs"
-name = "feed_the_fed"
+name = "bitter_street_bot"
